@@ -1667,13 +1667,37 @@
     .mobile-callbar { display: none; }
 
     @media (min-width: 981px) {
+      .page-hero, .page-hero .container {
+        min-height: 540px;
+      }
+      .page-hero .container {
+        padding-bottom: 58px;
+      }
       .page-hero h1 {
         max-width: 920px;
+        margin-bottom: 18px;
         font-size: clamp(3.8rem, 5.2vw, 6.2rem);
+      }
+      .testimonial-carousel, .testimonial-media {
+        min-height: 560px;
+      }
+      .testimonial-stage {
+        padding: clamp(44px, 5.2vw, 78px);
+      }
+      .testimonial-stage-head {
+        margin-bottom: clamp(32px, 3.8vw, 50px);
       }
       .testimonial-slide blockquote {
         max-width: 790px;
+        margin-bottom: 28px;
         font-size: clamp(2rem, 2.65vw, 3.35rem);
+      }
+      .testimonial-controls {
+        margin-top: clamp(34px, 4vw, 50px);
+      }
+      .footer-cta {
+        padding: clamp(64px, 7vw, 94px) 0;
+        gap: 38px;
       }
       .footer-cta h2 {
         max-width: 840px;
