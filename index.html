@@ -1666,6 +1666,21 @@
     .toast.show { visibility: visible; opacity: 1; transform: none; }
     .mobile-callbar { display: none; }
 
+    @media (min-width: 981px) {
+      .page-hero h1 {
+        max-width: 920px;
+        font-size: clamp(3.8rem, 5.2vw, 6.2rem);
+      }
+      .testimonial-slide blockquote {
+        max-width: 790px;
+        font-size: clamp(2rem, 2.65vw, 3.35rem);
+      }
+      .footer-cta h2 {
+        max-width: 840px;
+        font-size: clamp(3.4rem, 5.4vw, 6.4rem);
+      }
+    }
+
     @media (max-width: 1180px) {
       .header-row { grid-template-columns: 210px 1fr auto; min-height: 82px; }
       .brand { width: 195px; }
