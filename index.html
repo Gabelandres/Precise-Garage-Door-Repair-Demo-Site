@@ -3295,12 +3295,7 @@
     }
 
     function renderWithTransition() {
-      const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-      if (document.startViewTransition && !reduceMotion) {
-        document.startViewTransition(() => renderPage());
-      } else {
-        renderPage();
-      }
+      renderPage();
     }
 
     function openMenu() {
@@ -3426,8 +3421,8 @@
     }, { passive: true });
     window.addEventListener("hashchange", renderWithTransition);
     document.getElementById("year").textContent = new Date().getFullYear();
-    if (!location.hash) location.hash = "#/home";
-    else renderWithTransition();
+    if (!location.hash) history.replaceState(null, "", "#/home");
+    renderPage();
   </script>
 </body>
 </html>
